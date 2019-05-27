@@ -11,8 +11,9 @@ while order.lower() != 'e':
     if order != 'e':
         sandwich_orders.append(order.title())
 
-# Make individual sandwiches and move to complete
-for sandwich in sandwich_orders:
+# Move sandwiches to different completed list and print message for each made
+while sandwich_orders:
+    sandwich = sandwich_orders.pop()
     complete_order.append(sandwich)
     print(f"I made your {sandwich.lower()} sandwich.")
 
